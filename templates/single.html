@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>log website</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}"> 
+  </head>
+  <body>
+
+    {% include 'menu.html' %}
+
+    <div id="content-wrapper">
+        <h1>{{ page.title }}</h1>
+        <div id="metad">
+            <span class="cat">{{ page.cat }}</span>
+            <span class="date">{{ page.published }}</span>
+        </div>
+        <div id="content">
+            {{ page }}
+        </div>
+	<div id="gal">
+		{% for img in imgs : %}
+		<div class = "img_container">
+                        {% set img_url = page.path + '/' + img %}
+			<img src="pages/{{page.path}}/{{img}}"/>
+		</div>
+		{% endfor %}
+	</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+  </body>
+</html>

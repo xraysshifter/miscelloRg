@@ -1,0 +1,48 @@
+
+* {
+}
+
+.marquees {
+    color: #00FF41;
+    font-size: 20px;
+}
+
+
+
+
+
+body {
+    font-family: 'Courier';
+    background-color: black;
+
+}
+.container {
+        width:  20px;
+    height: 20px;
+    padding: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px dotted #00FF41;
+    background-image: url(./background2.gif);
+
+}
+
+.container a {
+    font-size: 1.7em;
+    color: #00FF41;
+    font-family: 'Courier';
+    font-style: inherit;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container a:hover {
+    font-size: 1.8em;
+    background-color: #00FF41;
+    color: white;
+    font-family: 'Courier';
+    font-style: italic;
+}
+

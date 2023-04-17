@@ -1,0 +1,14 @@
+<div id="menu">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('rootpage', _external=False) }}">[["_xXxh0me☣h0mexXx_"]]</a></li>
+                {% for cat in catList : %}
+		    <li><a href="{{ url_for('uindex', _external=False) }}cat/{{cat}}">{{cat}}</a></li>
+                {% endfor %}
+                <li><a href="{{ url_for('uindex', _external=False) }}info">info</a>
+                <div class="r_index">
+                
+                </li>
+            </ul>
+        </nav>
+    </div>
